@@ -1,0 +1,138 @@
+﻿<!DOCTYPE HTML>
+<html  ng-app="MyApp" >
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- ** <<<MODIFY HERE ** Set up your store meta data information-->
+<title>uniWebSalesFREE</title>
+<meta name="description" content="Store dedicated to ..." />
+<meta name="keywords" content="Key1, Key2, Key2..."/>
+<!-- ** UP TO HERE>>> ****************************************** -->
+
+<!--CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/slider.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/nivo-slider.css" rel="stylesheet" />
+<link href="css/angular-tooltips.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<!--CSS END -->
+
+<!--JS -->
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/controllers/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/controllers/ProductosController.js"></script>
+<!-- <script src="js/controllers/CartController.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript" src="js/shoppingModule.js"></script>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/startstop-slider.js"></script>
+<script src="js/jquery.nivo.slider.js"></script>
+<script src="js/angular-tooltips.js"></script>
+<script src="js/carousel.js"></script>
+<!-- END JS -->
+
+<link rel="icon" type="image/png" href="favicon.png" />
+
+</head>
+
+<body ng-controller="MainController">
+
+<span class="menu">
+  <div class="menuTitle">
+      Menu
+  </div>
+</span>
+<!-- font-size: 18px; -->
+
+
+<div class="menu-strip">
+<ul>
+<!-- ** <<<MODIFY BELOW ** Replace "uniWebSalesFREE" with the name of your store-->
+   <li style ="width: 55%; font-size: 18px;"><a href="#/inicio" style ="color: #fff;"><img src="./images/logo.png"/>uniWebSalesFREE</a></li>
+   <!-- <li style ="width: 15%;"><a href="#/carrito"><img src="./images/cart.png"/><span class="badge">{{itemsOnCart}}</span></a></li> -->
+   <li style ="width: 20%; font-size: 10px;"><a href="#/ayuda" style ="color: #fff;">About Us</a></li>
+</ul>
+<ul>
+   <li style ="width: 100%; height: 100%; font-size: 15px; padding-bottom: 0px; background: #635D5F;"><a href="#/ayuda" style ="color: #fff;">Browse our online collection!</a></li>
+</ul>
+</div>
+
+<script>
+  $("span.menu").click(function () {
+    $(".menu-strip").slideToggle("slow", function () {
+    });
+  });
+  $(window).resize(function () {
+    var top = $('div.item.active img').height() - 40;
+    if (top == -40)
+      top = $('div.item.active iframe').height();
+
+    $('.carousel-indicators').css("top", top);
+    if ($(window).width() > 640) 
+    {
+      $(".menu-strip").show();
+    }
+  });
+</script>
+
+<div class="clearfix"></div>
+
+  <div class="container" style =" width:95%;">
+    <div ng-view>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="facebook_footer">
+        <div class="container" style="padding: 0px;">
+        <div class="col-md-12">
+             <!-- ** <<<MODIFY BELOW ** Set up your store facebook link-->
+             <a target="_blank" href="https://www.facebook.com/your_store_facebook" class="btn btn-social-icon btn-lg btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-lg']);"><i class="fa fa-facebook"></i>
+             </a>
+             <!-- ** <<<MODIFY BELOW ** Set up your store facebook link-->
+             <a href="https://www.facebook.com/your_store_facebook">       
+               <!-- ** <<<MODIFY BELOW ** Set up your store facebook link-->    
+               <p  style="margin-left: 1%;margin-right:15% ; font-size: 1.5em;" >www.facebook.com/your_store_facebook
+               </p>
+             </a>
+
+        </div>
+      </div>
+    </div>
+<div class="copy_right">
+<p>
+<!-- ** <<<MODIFY BELOW ** Set up your Adress and data contact-->
+           Adress... - Tel:...  Contact info:...
+</p>
+</div>
+</div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+	  </script>
+
+    <a href="#" id="toTop"><span id="toTopHover"> </span></a>
+
+    <!-- ** <<<MODIFY BELOW ** Replace "XXWP-PHONE-NumberXX" whith your WhatsApp/WA Business Phone Number -->
+    <a href="https://api.whatsapp.com/send?phone=XXWP-PHONE-NumberXX&text=Hello, I am on the web site and I want to ask the following:%20" target="_blank"> <img src="images/logo-WA.png" alt="Contactanos por Whatsapp"
+          style="display: block;
+          position: fixed;
+          bottom: 25px;
+          right: 65px;
+          width: 150px;
+          height: 150px;">
+    </a>
+
+</body>
+</html>

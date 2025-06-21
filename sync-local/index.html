@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup Unicenta DB</title>
+</head>
+<body>
+
+    <h1>Backup Unicenta DB</h1>
+
+    <!-- Sequential Button -->
+    <button onclick="executeSequentially()">Execute Process</button>
+    <p id="resultado"></p>
+
+    <script>
+        function executeSequentially() {
+            executeSequentialScript('1-save-db.php', 'Saving DB copy');     
+        }
+
+        function executeSequentialScript(script, mensaje, callback) {
+            // Display the specific message
+            document.getElementById('resultado').innerHTML = mensaje;
+
+            // Make a request to the PHP script
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", script, true);
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Display the result in the corresponding element
+                    document.getElementById('resultado').innerHTML = xhr.responseText;
+
+                    // Call the callback if provided
+                    if (callback) {
+                        callback();
+                    }
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!-- <div class="main-content" ng-controller="ProductosController"> -->
+<div class="main-content">
+
+  <div class="textAdded" ng-show="added" >
+  Product added to cart!
+  </div>
+
+  <div class="col-md-12" style="padding-top: 10px; padding-bottom: 5px; padding-left: 32px;">  
+    <input type="search" class="text1" name="busqueda" id="busqueda" placeholder="Search Product..." ng-model="filtro" ng-change="filtrarProductos()" ng-click="buscando()">
+  </div>
+
+  <!-- Preload de carga de información -->
+  <div class="spinner" ng-show="loading">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+  </div>
+
+  <div ng-hide="loading">
+    <div>
+      <!-- List of categories for cell view -->
+      <!--It is hidden when searching by keyword so that the list of those found can be displayed-->
+      <div ng-hide="searching">
+        <div class="listaCategorias">
+          <h3>Search by Category: </h3>
+          <select id="categoriasList" class="select1" ng-model="selectedMenu" ng-change="getItems(item)" ng-options="item.NAME for item in menu | filter:{ PARENTID: null }">
+          </select>
+          <h3>{{rubroSeleccionado}}</h3>
+        </div>
+      </div>
+
+      <!-- Category list for pc view -->
+      <div class="col-md-3" style="padding-left: 0px; padding-right: 0px;"> <!--It is not hidden, it remains visible during a keyword search-->
+        <div class="categories">
+          <h3>Category</h3>
+          <ul class="productosLista">
+            <!-- to not show the subcategories -->
+            <li ng-repeat="item in menu | filter:{ PARENTID: null }">
+              <img ng-src="data:image/jpeg;base64,{{item.IMAGE}}">
+              <!-- <img ng-src="./images/imagencat.jpg"> -->
+              <a href="" ng-click="getItems(item)" >{{item.NAME}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- List of search results -->
+      <div class="col-md-9">
+        <div ng-show="searching" style="padding-top: 20px; padding-bottom: 100px; padding-left: 0px; padding-right: 0px;">
+          <!-- for pc view -->
+          <div class="categories">
+            <div class="productosLista">
+              <!-- <select id="lista_resultado_pc" class="select2" ng-model="item_pc" ng-click="selectItem_pc()"></select> -->
+              <ul>
+                <li><a href="" ng-click="verBusquedaCompleta()" style="color:#FF0000;">>{{EtiquetaResultadosBusqueda}}</a></li>
+                <li ng-repeat="item in menu_busqueda"><a href="" ng-click="selectItem_celu(item)" style="color:#333333;">{{item.NAME}}</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- for cell view -->
+          <div class="categories_1">
+            <div class="listaCategorias">
+              <ul>
+                <li><a href="" ng-click="verBusquedaCompleta()" style="color:#FF0000;">>{{EtiquetaResultadosBusqueda}}</a></li>
+                <li ng-repeat="item in menu_busqueda"><a href="" ng-click="selectItem_celu(item)" >{{item.NAME}}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product loading preload -->
+        <div class="spinner" ng-show="loadingProductos">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+
+        <div ng-hide="searching">
+
+          <!-- Product Grid Title -->
+          <div ng-hide="loadingProductos">
+            <ol class="breadcrumb titleProductos">
+              <li class="active" style="padding-left: 25px;">{{rubroSeleccionado}}</li>
+            </ol>
+            <!-- Product grid -->
+            <div class="divProductos" style="text-align: center;" ng-hide="showDetails">
+              <div class="producto"  ng-repeat="producto in productos">
+                <a href="" ng-click="getDetalleItem(producto)">
+                  <div class="mask">
+                    <div class="info">{{producto.NAME}}</div>
+                  </div>
+                  <div class="divImagen">
+                    <img ng-src="data:image/jpeg;base64,{{producto.IMAGE}}" ng-load="loadImage()" imageonload>
+                  </div>
+                  <!-- <h2  style="width: 150px; margin-top: 5px;">{{producto.NAME}}</h2> -->
+                  <h2  style="width: 200px; margin-top: 5px;">{{producto.NAME}}</h2>
+                  <div class="price-details">
+                    <div class="price-number">
+                      <!-- <p><span class="rupees">$ {{producto.PRICESELL}}  </span></p> -->
+                      <p><span class="rupees">{{producto.PRICESELL}}  </span></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- This is the sample of a selected product -->
+            <div class="productoDetalle" ng-show="showDetails">
+              <div class="product-details">
+                <div class="grid images_3_of_2">
+                  <div id="container">
+                    <div id="products_example">
+                      <div id="products">
+                        <div class="slides_container" style="overflow: hidden; position: relative; display: block;">
+                          <div class="slides_control" >
+                            <img  src="data:image/jpeg;base64,{{ImagenProducto}}"  alt=" ">
+                            <a href="" ng-click="Agregar()"<div class="button" style="background:#3483fa; text-align: center; width: 90%;">Add to cart</div></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="desc descDetalle">
+                    <h2>{{NombreProducto}}</h2>
+                    <div class="price">
+                      <p><span>$ {{ImporteProducto}}</span></p>
+                    </div>
+                    <p>{{DescripcionProducto}}</p>
+                    <div class="clear"></div>
+                    </div
+
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+  </div>
+
+  <div class="clear"></div>
