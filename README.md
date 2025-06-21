@@ -17,7 +17,7 @@ Es la versión libre y de código abierto bajo licencia GNU GPL3, permite exhibi
 
 uniWebSales-Premium
 
-Si usted quiere contribuir con el proyecto de desarrollo de uniWebSales, adquiera por un único pago la versión Premium, la cual añade funcionalidades como el carrito de compras y descarga de presupuestos en formato PDF. Además, añade mejoras en cuanto a la velocidad de carga del sitio web.
+Si usted quiere contribuir con el proyecto de desarrollo de uniWebSales, adquiera por un único pago la versión Premium (http://www.uniwebsales.com/), la cual añade funcionalidades como el carrito de compras y descarga de presupuestos en formato PDF. Además, añade mejoras en cuanto a la velocidad de carga del sitio web.
 Con la descarga se provee un manual de instrucciones sencillo, que le permitirá personalizar el sitio con los datos de su tienda como el logotipo, dirección, información de contacto, redes sociales, así como las keywords y metadatos para buscadores. También se explica detalladamente como configurar la conexión hacia la Base de Datos local y la sincronización con la base de datos de uniCenta oPOS.
 
 
@@ -38,7 +38,7 @@ Join our community of open-source enthusiasts and discover the potential of uniW
 
 uniWebSales-Premium
 
-If you want to contribute to the development project of uniWebSales, you can purchase the Premium version with a one-time payment. It adds features such as a shopping cart and the ability to download quotes in PDF format. It also includes improvements in website loading speed.
+If you want to contribute to the development project of uniWebSales, you can purchase the Premium version with a one-time payment (http://www.uniwebsales.com/). It adds features such as a shopping cart and the ability to download quotes in PDF format. It also includes improvements in website loading speed.
 Upon download, a simple instruction manual is provided, allowing you to customize the site with your store's data such as logo, address, contact information, social media, as well as keywords and metadata for search engines. It also provides detailed instructions on how to configure the connection to the local database and synchronize it with the uniCenta oPOS database.
 
 
