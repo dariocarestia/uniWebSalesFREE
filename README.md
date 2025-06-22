@@ -33,7 +33,7 @@ Experience the convenience and efficiency of uniWebSales and effortlessly expand
 
 uniWebSalesFREE
 
-This is the free and open-source version under the GNU GPL3 license, allowing you to display all products on a web page, with their image, price, and description, organized into categories and subcategories, just like in uniCenta oPOS. The entire website and source code can be downloaded from the following GitHub address: https://github.com/dariocarestia/uniWebSalesFREE
+This is the free and open-source version under the GNU GPL3 license, allowing you to display all products on a web page, with their image, price, and description, organized into categories and subcategories, just like in uniCenta oPOS. The entire website and source code can be downloaded from the following GitHub address: https://github.com/dariocarestia/uniWebSalesFREE/archive/refs/heads/main.zip
 Join our community of open-source enthusiasts and discover the potential of uniWebSalesFREE to boost your business.
 
 uniWebSales-Premium
