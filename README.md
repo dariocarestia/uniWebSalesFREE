@@ -12,7 +12,7 @@ Experimente la conveniencia y la eficiencia de uniWebSales y amplíe sin esfuerz
 
 uniWebSalesFREE
 
-Es la versión libre y de código abierto bajo licencia GNU GPL3, permite exhibir en una página web todos los productos, con su imagen, precio y descripción, organizados en categorías y subcategorías, de la misma forma en que se encuentran en uniCenta oPOS. Todo el sitio web y el código fuente puede descargarse desde la siguiente dirección de GitHub: https://github.com/dariocarestia/uniWebSalesFREE
+Es la versión libre y de código abierto bajo licencia GNU GPL3, permite exhibir en una página web todos los productos, con su imagen, precio y descripción, organizados en categorías y subcategorías, de la misma forma en que se encuentran en uniCenta oPOS. Todo el sitio web y el código fuente puede descargarse desde la siguiente dirección de GitHub: https://github.com/dariocarestia/uniWebSalesFREE/archive/refs/heads/main.zip
 Únete a nuestra comunidad de usuarios comprometidos con el código abierto y descubre el potencial de uniWebSalesFREE para impulsar tu negocio.
 
 uniWebSales-Premium
